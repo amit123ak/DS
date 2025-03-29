@@ -1,0 +1,48 @@
+package NewProjectTest.NewProjectTest;
+
+import java.util.Arrays;
+
+public class TwoStringAnagrame {
+
+	public static void main(String[] args) {
+		
+		// TODO Auto-generated method stub
+		
+		String  str1="madam";
+		String str2="aammd";
+				
+		
+		
+      System.out.println(IsAnagrame(str1,str2));
+      System.out.println(IsAnagrame("listen","silent"));
+      System.out.println(IsAnagrame("Hello","Olelh"));
+
+	}
+
+	private static boolean IsAnagrame(String str1, String str2) {
+		// TODO Auto-generated method stub
+		
+		
+		char s1[]=str1.replaceAll("\\s", "").toLowerCase().toCharArray();
+		char s2[]=str2.replaceAll("\\s", "").toLowerCase().toCharArray();
+		
+		  if(s1.length!=s2.length)
+		  {
+			  
+			return false;
+		  }else {
+			  
+			  
+			   Arrays.sort(s1);
+			   Arrays.sort(s2);
+			   
+			return Arrays.equals(s1, s2);
+		  }
+		  
+		
+		
+		
+		
+	}
+
+}
